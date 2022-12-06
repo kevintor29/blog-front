@@ -18,6 +18,7 @@ function Login(){
             token: '',
             foto: ''
         }
+        
     )
 
     function updateModel(e: ChangeEvent<HTMLInputElement>) {
@@ -41,10 +42,12 @@ function Login(){
         //  const resposta = await api.post(`/usuarios/logar`, userLogin)
         //     setToken(resposta.data.token)
          
-            await login(`usuarios/logar`,userLogin,setToken)
+            await login(`/auth/logar`,userLogin,setToken)
             alert('Usuário logado com sucesso')
+            
         } catch(error) {
-            alert('Dados do usuário inconsistentes, Erro ao logar!');
+            alert(`Dados do usuário inconsistentes, Erro ao logar! ${userLogin}`);
+            
         }
     }
 
