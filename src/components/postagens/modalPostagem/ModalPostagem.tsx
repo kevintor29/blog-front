@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: theme.palette.background.paper,
       border: '2px solid #000',
       boxShadow: theme.shadows[5],
-      padding: theme.spacing(2, 4, 3),
+      padding: theme.spacing(2, 4, 3),      
     },
   }),
 );
@@ -67,7 +67,7 @@ function ModalPostagem () {
         open={open}
         onClose={handleClose}
         aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
+        aria-describedby="simple-modal-description"        
       >
         {body}
       </Modal>
